@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row bg-light p-2 mb-5">
+            <div class="col-8 d-flex align-items-center">
+                <h1><i class="fa-brands fa-instagram me-2"></i>Instagram</h1>
+            </div>
+            <div class="col-4 d-flex align-items-center justify-content-end">
+                <button type="button" class="btn btn-success me-5" data-bs-toggle="modal" data-bs-target="#postModal">Create a New Post</button>
+                <div class="modal fade" id="postModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>Create a New Post</h1>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Caption:</h5>
+                                <textarea class="w-100" rows="2"></textarea>
+                                <button type="button" class="btn btn-light">
+                                    <i class="fa-solid fa-camera"></i>
+                                </button>
+                                <button type="button" class="btn btn-light">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Menu</button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Accesibilty</a></li>
+                      <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item text-danger">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2 mx-auto">
+                <ul class="nav nav-pills mb-3 justify-content-center" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="grid-pill" data-bs-toggle="pill" data-bs-target="#gridPhotos" type="button" role="tab">
+                        <i class="fa-solid fa-table-cells"></i>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="card-pill" data-bs-toggle="pill" data-bs-target="#cardPhotos" type="button" role="tab">
+                        <i class="fa-solid fa-square"></i>
+                      </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade show active mx-auto " id="gridPhotos" role="tabpanel">
+                <div class="row gx-1 mb-1">
+                  <div class="col-4">
+                    <img src="https://placekitten.com/667" alt="" class="card-img-top" />
+                  </div>
+                  <div class="col-4">
+                    <img src="https://placekitten.com/503" alt="" class="card-img-top" />
+                  </div>
+                  <div class="col-4">
+                    <img src="https://place-puppy.com/500x500" alt="" class="card-img-top" />
+                  </div>
+                </div>
+                <div class="row gx-1 mb-1">
+                  <div class="col-4">
+                    <img src="https://placekitten.com/789" alt="" class="card-img-top" />
+                  </div>
+                  <div class="col-4">
+                    <img src="https://media.tenor.com/z_OpPlHANfMAAAAC/roller-coaster-tycoon-hotdog-stand.gif" alt="" class="card-img-top" />
+                  </div>
+                  <div class="col-4">
+                    <img src="https://place-puppy.com/601x600" alt="" class="card-img-top" />
+                  </div>
+                </div>
+                <div class="row gx-1 mb-1">
+                  <div class="col-4">
+                    <img src="https://placekitten.com/989" alt="" class="card-img-top" />
+                  </div>
+                  <div class="col-4">
+                    <img src="https://place-puppy.com/401x401" alt="" class="card-img-top" />
+                  </div>
+                  <div class="col-4">
+                    <img src="https://media.tenor.com/zqHt_SXL6vgAAAAd/bye-oblivion.gif" alt="" class="card-img-top h-100" style="object-fit: cover;"/>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="tab-pane fade" id="cardPhotos" role="tabpanel">
+              <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="card p-1 mb-5">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <span class="fw-bold">Cat Photo #1</span> <span class="text-secondary">5/26</span>
+                  </div>
+                  <img src="https://placekitten.com/667" alt="" class="" />
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      This post was liked by <b>28 people</b>
+                    </li>
+                    <li class="list-group-item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                      provident nobis, fuga sint voluptatibus enim laborum veritatis et
+                      saepe, totam odio amet officiis quidem nihil consequuntur blanditiis
+                      possimus esse! Itaque?
+                    </li>
+                  </ul>
+                </div>
+                <div class="card p-1 mb-5">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <span class="fw-bold">Cat Photo #2</span> <span class="text-secondary">5/27</span>
+                  </div>
+                  <img src="https://placekitten.com/503" alt="" class="" />
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      This post was liked by <b>46 people</b>
+                    </li>
+                    <li class="list-group-item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                      provident nobis, fuga sint voluptatibus enim laborum veritatis et
+                      saepe, totam odio amet officiis quidem nihil consequuntur blanditiis
+                      possimus esse! Itaque?
+                    </li>
+                  </ul>
+                </div>
+                <div class="card p-1 mb-5">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <span class="fw-bold">Dog Photo #1</span> <span class="text-secondary">5/28</span>
+                  </div>
+                  <img src="https://place-puppy.com/500x500" alt="" class="" />
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      This post was liked by <b>10 people</b>
+                    </li>
+                    <li class="list-group-item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                      provident nobis, fuga sint voluptatibus enim laborum veritatis et
+                      saepe, totam odio amet officiis quidem nihil consequuntur blanditiis
+                      possimus esse! Itaque?
+                    </li>
+                  </ul>
+                </div>
+                <div class="card p-1 mb-5">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <span class="fw-bold">Cat Photo #3</span> <span class="text-secondary">5/28</span>
+                  </div>
+                  <img src="https://placekitten.com/789" alt="" class="" />
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      This post was liked by <b>24 people</b>
+                    </li>
+                    <li class="list-group-item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                      provident nobis, fuga sint voluptatibus enim laborum veritatis et
+                      saepe, totam odio amet officiis quidem nihil consequuntur blanditiis
+                      possimus esse! Itaque?
+                    </li>
+                  </ul>
+                </div>
+                <div class="card p-1 mb-5">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <span class="fw-bold">Hot Dog</span> <span class="text-secondary">5/29</span>
+                  </div>
+                  <img src="https://media.tenor.com/z_OpPlHANfMAAAAC/roller-coaster-tycoon-hotdog-stand.gif" alt="" class="" />
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      This post was liked by <b>1 person</b>
+                    </li>
+                    <li class="list-group-item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                      provident nobis, fuga sint voluptatibus enim laborum veritatis et
+                      saepe, totam odio amet officiis quidem nihil consequuntur blanditiis
+                      possimus esse! Itaque?
+                    </li>
+                  </ul>
+                </div>
+                <div class="card p-1 mb-5">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <span class="fw-bold">Dog Photo #2</span> <span class="text-secondary">5/30</span>
+                  </div>
+                  <img src="https://place-puppy.com/601x600" alt="" class="" />
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      This post was liked by <b>43 people</b>
+                    </li>
+                    <li class="list-group-item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                      provident nobis, fuga sint voluptatibus enim laborum veritatis et
+                      saepe, totam odio amet officiis quidem nihil consequuntur blanditiis
+                      possimus esse! Itaque?
+                    </li>
+                  </ul>
+                </div>
+                <div class="card p-1 mb-5">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <span class="fw-bold">Cat Photo #4</span> <span class="text-secondary">5/30</span>
+                  </div>
+                  <img src="https://placekitten.com/989" alt="" class="" />
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      This post was liked by <b>98 people</b>
+                    </li>
+                    <li class="list-group-item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                      provident nobis, fuga sint voluptatibus enim laborum veritatis et
+                      saepe, totam odio amet officiis quidem nihil consequuntur blanditiis
+                      possimus esse! Itaque?
+                    </li>
+                  </ul>
+                </div>
+                <div class="card p-1 mb-5">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <span class="fw-bold">Dog Photo #3</span> <span class="text-secondary">5/31</span>
+                  </div>
+                  <img src="https://place-puppy.com/401x401" alt="" class="" />
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      This post was liked by <b>6 people</b>
+                    </li>
+                    <li class="list-group-item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                      provident nobis, fuga sint voluptatibus enim laborum veritatis et
+                      saepe, totam odio amet officiis quidem nihil consequuntur blanditiis
+                      possimus esse! Itaque?
+                    </li>
+                  </ul>
+                </div>
+                <div class="card p-1 mb-5">
+                  <div class="card-header d-flex justify-content-between bg-white">
+                    <span class="fw-bold">Goodbye</span> <span class="text-secondary">5/31</span>
+                  </div>
+                  <img src="https://media.tenor.com/zqHt_SXL6vgAAAAd/bye-oblivion.gif" alt="" class="" style="height: 500px; object-fit: cover;" />
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      This post was liked by <b>24980 people</b>
+                    </li>
+                    <li class="list-group-item">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+                      provident nobis, fuga sint voluptatibus enim laborum veritatis et
+                      saepe, totam odio amet officiis quidem nihil consequuntur blanditiis
+                      possimus esse! Itaque?
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Scripts --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
